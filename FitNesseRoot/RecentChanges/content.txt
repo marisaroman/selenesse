@@ -1,0 +1,13 @@
+|SlimSeleniumDriver||16:01:05 Mon, Feb 15, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava||15:58:27 Mon, Feb 15, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.SetUp||15:54:44 Mon, Feb 15, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.CheckTest||15:31:52 Mon, Feb 15, 2010|
+|FrontPage||15:28:45 Mon, Feb 15, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.FocusTest||02:38:17 Fri, Jan 29, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.SelectTest||02:33:43 Fri, Jan 29, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.ClickAtTest||02:27:16 Fri, Jan 29, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.ClickTest||23:03:45 Tue, Jan 26, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.TearDown||22:29:02 Tue, Jan 26, 2010|
+|HtmlElements||22:27:35 Tue, Jan 26, 2010|
+|PageFooter||21:58:17 Tue, Jan 26, 2010|
+|SlimSeleniumDriver.SuiteAcceptanceJava.FirstTest||18:56:55 Sat, Dec 12, 2009|

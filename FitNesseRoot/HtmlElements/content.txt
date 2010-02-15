@@ -1,0 +1,97 @@
+!3 This page is used as the page under test for the !-SeleNesse-! acceptance suites.
+
+!-
+<input type="button" id="button1" onclick="document.getElementById('text1').value='button1'" value="button1 value"/>
+
+<input type="button" onclick="document.getElementById('text1').value='button2'" value="i18n &aring;&aring;h"/>
+
+text 1: <input type="text" id="text1" value="" onblur="document.getElementById('cbblur').checked=true" onkeydown="document.getElementById('cbkeydown').checked=true"
+onkeyup="document.getElementById('cbkeyup').checked=true"
+onfocus="document.getElementById('cbfocus').checked=true"
+onchange="document.getElementById('cbchange').checked=true"/>
+
+<br/>
+area1:<textarea id="area1" rows="5"></textarea>
+
+Check1: <input type="checkbox" name="check1" value="1c" />
+
+Check2: <input type="checkbox" name="check2" value="1c" checked/>
+
+
+Radio1: <input type="radio" name="radioname" value="Radio1" />
+
+Radio2: <input type="radio" name="radioname" value="Radio2" checked/>
+
+<input type="button" id="DisableButton1" onclick="document.getElementById('button1').disabled=true" value="disable button1"/>
+
+<input type="button" id="DisableText1" onclick="document.getElementById('text1').disabled=true" value="disable text1"/>
+
+<input type="button" id="EnableButton1" onclick="document.getElementById('button1').disabled=false" value="enable button1"/>
+
+<input type="button" id="EnableText1" onclick="document.getElementById('text1').disabled=false" value="enable text1"/>
+
+<select id="sel1">
+<option>Mr</option>
+<option>Mrs</option>
+</select>
+
+<div id="div1">This text is visible</div>
+<div style="display:none">This text is not visible</div>
+<div id="div2"></div>
+
+<script language="javascript">
+function addtext(){
+ // string split here so that text is not matched in page source
+ document.getElementById('div1').innerHTML="this text appears" + " with a delay";
+ aElement=document.createElement("span");
+ aElement.innerHTML="dynamic element";
+ aElement.id="dynel";
+ document.getElementById('div2').appendChild(aElement);
+}
+function removetext(){
+ document.getElementById('div1').innerHTML="dynamic text is gone";
+ aElement=document.getElementById('dynel');
+ document.getElementById('div2').removeChild(aElement)
+}
+function setfieldtxt(){
+ document.getElementById('text1').value="hello world";
+}
+setTimeout("addtext()",3000);
+
+var page;
+
+function redirect() {
+  window.location = page;
+}
+
+function gotoPage(time, url) {
+  page = url;
+  timer = setTimeout('redirect()', time);
+}
+
+</script>
+<input value="remove dyn" type="button" id="removedyn" onclick="setTimeout('removetext()',3000)" />
+
+<input value="set field text" type="button" id="setfieldtext" onclick="setTimeout('setfieldtxt()',3000)" />
+
+<input type="checkbox" id="cbblur">blur
+<input type="checkbox" id="cbfocus">focus
+<input type="checkbox" id="cbkeyup">keyup
+<input type="checkbox" id="cbkeydown">keydown
+<input type="checkbox" id="cbchange">change
+
+<input value="ask me" type="button" id="cfmbutton" onclick="confirm('Are you sure')" />
+
+<input value="buzz me" type="button" id="altbutton" onclick="alert('Wake up!')" />
+
+<a href="VariableDefinitions" id="loadnext">Load Next</a>
+
+<a href="javascript:gotoPage('2000', 'VariableDefinitions')" id="delayedloadnext">Delayed Load Next</a>
+
+<a href="#">Simple Link</a>
+
+<a href="#"><span style="font-weight: bold;">Span-padded Link</span></a>
+
+
+
+-!

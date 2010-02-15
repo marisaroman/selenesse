@@ -1,0 +1,2 @@
+!c !-SeleNesse-! is maintained by [[Marisa Seal][http://thetestingblog.com/author/marrrisa]] and [[Chris !-McMahon-!][http://chrismcmahonsblog.blogspot.com]]
+!c Portions of !-SeleNesse-! are based on code originally written by [[Gojko Adzic][http://gojko.net]]

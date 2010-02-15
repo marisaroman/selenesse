@@ -1,0 +1,2 @@
+#!|script|
+|ensure|focus|area1|

@@ -1,0 +1,10 @@
+!1 Slim Selenium Driver
+'''Important Concepts:'''
+
+ *All Selenium RC 1.0.1 methods are available via !-SeleNesse-!
+ *Methods that provide interaction with a page element (such as ''click'', ''type'', etc.) first determine whether the page element exists. If the element exists, the appropriate action is triggered, and the method returns ''true''. If the element does not exist, the corresponding action is '''not''' triggered, and the method returns ''false''.
+ *Note the use of the Slim script table sequential argument processing suffix ";" - !-FitNesse 20100103 or later is required to use this style of method call in Slim script tables.-!
+
+>SuiteAcceptanceJava
+
+!define TEST_SYSTEM {slim}

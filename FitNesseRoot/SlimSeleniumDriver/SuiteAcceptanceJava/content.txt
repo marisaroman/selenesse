@@ -1,0 +1,4 @@
+!contents -R2 -g -p -f -h
+
+!path dist/java/*.jar
+!path lib/*.jar

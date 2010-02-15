@@ -1,0 +1,11 @@
+!1 !-SelNesse-! 
+!-SelNesse-! packages FIT and Slim fixtures that expose the Selenium RC API and enable Selenium tests to be written as [[!-FitNesse-!][http://fitnesse.org]] tests.
+
+'''Benefits of managing Selenium tests in !-FitNesse-!:'''
+
+ *The [[include widget][http://fitnesse.org/FitNesse.UserGuide.MarkupPageInclude]] and [[Slim scenario tables][http://fitnesse.org/FitNesse.UserGuide.SliM.ScenarioTable]] enable the reuse of UI actions that may be used frequently, such as logging in to a site or completing a particular form.
+ *Selenium actions can be mixed with calls to other fixtures. This is particularly useful if you already have fixtures in place for creating test data - if appropriate, you can create the test data with the appropriate fixture(s) instead of creating test data via the UI.
+
+!2 SlimSeleniumDriver
+
+!note !-SeleNesse-! is based on [[!-FitNesse-!][http://fitnesse.org]] Release v20100103 and Selenium RC 1.0.1
