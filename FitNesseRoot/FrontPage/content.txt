@@ -1,5 +1,5 @@
-!1 !-SelNesse-! 
-!-SelNesse-! packages FIT and Slim fixtures that expose the Selenium RC API and enable Selenium tests to be written as [[!-FitNesse-!][http://fitnesse.org]] tests.
+!1 !-SeleNesse-! 
+!-SeleNesse-! packages FIT and Slim fixtures that expose the Selenium RC API and enable Selenium tests to be written as [[!-FitNesse-!][http://fitnesse.org]] tests.
 
 '''Benefits of managing Selenium tests in !-FitNesse-!:'''
 
