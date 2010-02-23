@@ -42,7 +42,12 @@ public class SlimSeleniumDriver {
 	
 	//Element interaction methods
 	public boolean click(String locator) {
-		return fireEventIfElementExists("click", locator);
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound) {
+			seleniumInstance.click(locator);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean clickAt(String locator, String coordinates) {
@@ -73,15 +78,30 @@ public class SlimSeleniumDriver {
 	}
 	
 	public boolean focus(String locator) {
-		return fireEventIfElementExists("focus", locator);
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound) {
+			seleniumInstance.focus(locator);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean makeChecked(String locator) {
-		return fireEventIfElementExists("check", locator);
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound) {
+			seleniumInstance.check(locator);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean makeNotChecked(String locator) {
-		return fireEventIfElementExists("uncheck", locator);
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound) {
+			seleniumInstance.uncheck(locator);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean select(String selectLocator, String optionLocator) {
@@ -168,22 +188,6 @@ public class SlimSeleniumDriver {
 	   		return seleniumInstance.isTextPresent(text);
 	   	}
     }
-	
-	private boolean fireEventIfElementExists(String actionName, String locator) {
-		boolean elementFound = seleniumInstance.isElementPresent(locator);
-		if (elementFound) {
-			try {
-				seleniumInstance.fireEvent(locator, actionName);
-			}
-			catch (SeleniumException e) {
-				if (isKnownSeleniumBug(e)) {
-					fireEventIfElementExists(actionName, locator);
-				}
-				throw e;
-			}
-		}
-		return elementFound;
-	}
 	
 	private boolean optionIsAlreadySelected(String selectLocator, String optionLocator) {
 		if ((optionLocator.startsWith("id=") 
