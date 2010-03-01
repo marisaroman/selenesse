@@ -149,7 +149,9 @@ public class SlimSeleniumDriver {
 			if (isKnownSeleniumBug(e)) {
 				waitForElementPresent(locator);
 			}
-			throw e;
+			else {
+				throw e;
+			}
 		}
 		return true;
 	}
@@ -163,7 +165,9 @@ public class SlimSeleniumDriver {
         	if (isKnownSeleniumBug(e)) {
         		waitForTextPresent(text);
         	}
-        	throw e;
+        	else {
+				throw e;
+			}
         }
         return true;
 	}
