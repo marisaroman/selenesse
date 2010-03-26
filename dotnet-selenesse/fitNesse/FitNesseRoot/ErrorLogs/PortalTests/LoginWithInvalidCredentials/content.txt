@@ -1,0 +1,6 @@
+!3 !-slim-!
+|'''Date: '''|!-1:08:18 PM (EDT) on Thursday, March 25, 2010-!|
+|'''Test Page: '''|.PortalTests.LoginWithInvalidCredentials|
+|'''Command: '''|!-dist\dotnet\Runner.exe -r fitSharp.Slim.Service.Runner,dist\dotnet\fitSharp.dll dist\dotnet\SlimSeleniumDriver.dll  8086-!|
+|'''Exit code: '''|!-1-!|
+|'''Time elapsed: '''|!-2.359 seconds-!|

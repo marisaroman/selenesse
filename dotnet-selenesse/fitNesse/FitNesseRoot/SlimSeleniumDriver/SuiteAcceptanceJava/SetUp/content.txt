@@ -1,0 +1,6 @@
+!|import  |
+|selenesse|
+
+#!|script|
+|start|Slim Selenium Driver|localhost|4444|*firefox|http://localhost:8080/HtmlElements|
+|open |HtmlElements                                                                   |
