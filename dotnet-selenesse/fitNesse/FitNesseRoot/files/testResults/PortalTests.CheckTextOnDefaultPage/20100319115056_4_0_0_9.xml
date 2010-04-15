@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20091210</FitNesseVersion>
+  <rootPath>CheckTextOnDefaultPage</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>9</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-5960266836408433330');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-5960266836408433330"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="PortalTests.SetUp">.PortalTests.SetUp</a> <a href="PortalTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-5960266836408433330"><table border="1" cellspacing="0" _TABLENUMBER=327288017564053384>
+<tr><td>import</td>
+</tr>
+<tr><td>Selenesse</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7769417528610691131>
+<tr class="hidden"><td colspan="6">script</td>
+</tr>
+<tr><td>start</td>
+<td><span class="pass">Slim Selenium Driver</span></td>
+<td>localhost</td>
+<td>4444</td>
+<td>*firefox</td>
+<td>http://qa1/</td>
+</tr>
+<tr><td>open</td>
+<td colspan="5">/363_QA/</td>
+</tr>
+</table>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=1373776129391978374>
+<tr class="hidden"><td colspan="3">script</td>
+</tr>
+<tr><td><span class="pass">type;</span></td>
+<td>ctl03_userName</td>
+<td>admin</td>
+</tr>
+<tr><td><span class="pass">type;</span></td>
+<td>ctl03_password</td>
+<td>DocSite311</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=1622243077977681085>
+<tr class="hidden"><td colspan="2">script</td>
+</tr>
+<tr><td><span class="pass">clickAndWait</span></td>
+<td>ctl03_SigninBtn</td>
+</tr>
+</table>
+</div>
+</div>
+<table border="1" cellspacing="0" _TABLENUMBER=6609505437625043218>
+<tr class="hidden"><td colspan="3">script</td>
+</tr>
+<tr><td>reject <span class="error">Method isTextPresent not found in Selenesse.SlimSeleniumDriver</span></td>
+<td>is text present</td>
+<td>blah</td>
+</tr>
+<tr><td>ensure <span class="error">Method isTextPresent not found in Selenesse.SlimSeleniumDriver</span></td>
+<td>is text present</td>
+<td>PatientPlanner</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8508341116456545365>
+<tr class="hidden"><td>verifyText <span class="error">Could not find class verifyText</span></td>
+<td>link=Resource Links <span class="error">The instance decisionTable_5 does not exist</span></td>
+<td>Resource Links <span class="error">The instance decisionTable_5 does not exist</span></td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>CheckTextOnDefaultPage</relativePageName>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[Selenesse]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_1</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[pass(Slim Selenium Driver)]]></col>
+                    <col><![CDATA[localhost]]></col>
+                    <col><![CDATA[4444]]></col>
+                    <col><![CDATA[*firefox]]></col>
+                    <col><![CDATA[http://qa1/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[open]]></col>
+                    <col><![CDATA[/363_QA/]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_2</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(type;)]]></col>
+                    <col><![CDATA[ctl03_userName]]></col>
+                    <col><![CDATA[admin]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(type;)]]></col>
+                    <col><![CDATA[ctl03_password]]></col>
+                    <col><![CDATA[DocSite311]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(clickAndWait)]]></col>
+                    <col><![CDATA[ctl03_SigninBtn]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_4</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[reject error(Method isTextPresent not found in Selenesse.SlimSeleniumDriver)]]></col>
+                    <col><![CDATA[is text present]]></col>
+                    <col><![CDATA[blah]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(Method isTextPresent not found in Selenesse.SlimSeleniumDriver)]]></col>
+                    <col><![CDATA[is text present]]></col>
+                    <col><![CDATA[PatientPlanner]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_5</name>
+                <row>
+                    <col><![CDATA[verifyText error(Could not find class verifyText)]]></col>
+                    <col><![CDATA[link=Resource Links error(The instance decisionTable_5 does not exist)]]></col>
+                    <col><![CDATA[Resource Links error(The instance decisionTable_5 does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, Selenesse]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_0, make, scriptTableActor, SlimSeleniumDriver, localhost, 4444, *firefox, http://qa1/]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Slim Selenium Driver]]></expected>
+                              <evaluationMessage><![CDATA[pass(Slim Selenium Driver)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_1, call, scriptTableActor, open, /363_QA/]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[localhost]]></expected>
+                              <evaluationMessage><![CDATA[localhost]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[4444]]></expected>
+                              <evaluationMessage><![CDATA[4444]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[*firefox]]></expected>
+                              <evaluationMessage><![CDATA[*firefox]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>5</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[http://qa1/]]></expected>
+                              <evaluationMessage><![CDATA[http://qa1/]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[open]]></expected>
+                              <evaluationMessage><![CDATA[open]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_0, call, scriptTableActor, type, ctl03_userName, admin]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[type;]]></expected>
+                              <evaluationMessage><![CDATA[pass(type;)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1, call, scriptTableActor, type, ctl03_password, DocSite311]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[type;]]></expected>
+                              <evaluationMessage><![CDATA[pass(type;)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, call, scriptTableActor, clickAndWait, ctl03_SigninBtn]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[clickAndWait]]></expected>
+                              <evaluationMessage><![CDATA[pass(clickAndWait)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_0, call, scriptTableActor, isTextPresent, blah]]]></instruction>
+        <slimResult><![CDATA[!error:Method isTextPresent not found in Selenesse.SlimSeleniumDriver]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>RejectActionExpectation</type>
+                    <actual><![CDATA[!error:Method isTextPresent not found in Selenesse.SlimSeleniumDriver]]></actual>
+                              <expected><![CDATA[reject]]></expected>
+                              <evaluationMessage><![CDATA[reject error(Method isTextPresent not found in Selenesse.SlimSeleniumDriver)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_1, call, scriptTableActor, isTextPresent, PatientPlanner]]]></instruction>
+        <slimResult><![CDATA[!error:Method isTextPresent not found in Selenesse.SlimSeleniumDriver]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:Method isTextPresent not found in Selenesse.SlimSeleniumDriver]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(Method isTextPresent not found in Selenesse.SlimSeleniumDriver)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_5_0, make, decisionTable_5, verifyText, link=Resource Links, Resource Links]]]></instruction>
+        <slimResult><![CDATA[!error:Could not find class verifyText]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not find class verifyText]]></actual>
+                              <expected><![CDATA[verifyText]]></expected>
+                              <evaluationMessage><![CDATA[verifyText error(Could not find class verifyText)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_5_1, call, decisionTable_5, table, []]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_5 does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_5 does not exist]]></actual>
+                              <expected><![CDATA[link=Resource Links]]></expected>
+                              <evaluationMessage><![CDATA[link=Resource Links error(The instance decisionTable_5 does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_5 does not exist]]></actual>
+                              <expected><![CDATA[Resource Links]]></expected>
+                              <evaluationMessage><![CDATA[Resource Links error(The instance decisionTable_5 does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

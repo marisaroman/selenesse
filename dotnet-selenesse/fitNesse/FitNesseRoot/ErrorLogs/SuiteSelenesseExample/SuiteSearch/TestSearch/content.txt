@@ -1,0 +1,6 @@
+!3 !-fit-!
+|'''Date: '''|!-10:16:52 AM (EST) on Thursday, March 11, 2010-!|
+|'''Test Page: '''|.SuiteSelenesseExample.SuiteSearch.TestSearch|
+|'''Command: '''|!-java -cp fitnesse.jar;defaultPath fit.FitServer Developer2 8080 1-!|
+|'''Exit code: '''|!-4-!|
+|'''Time elapsed: '''|!-0.687 seconds-!|

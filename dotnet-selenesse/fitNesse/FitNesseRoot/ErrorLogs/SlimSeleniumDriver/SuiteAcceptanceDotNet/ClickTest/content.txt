@@ -1,0 +1,6 @@
+!3 !-slim-!
+|'''Date: '''|!-3:08:52 PM (EST) on Monday, March 1, 2010-!|
+|'''Test Page: '''|.SlimSeleniumDriver.SuiteAcceptanceDotNet.ClickTest|
+|'''Command: '''|!-c:\tools\nslim\Runner.exe -r fitSharp.Slim.Service.Runner,dist/dotnet/fitSharp.dll dist/dotnet/SlimSeleniumDriver.dll  8088-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-7.219 seconds-!|

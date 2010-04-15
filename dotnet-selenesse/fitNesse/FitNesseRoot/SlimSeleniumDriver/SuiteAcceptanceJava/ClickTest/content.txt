@@ -1,0 +1,5 @@
+#!|script|
+|note  |The element button1 exists on the page under test.        |
+|ensure|click                       |button1                      |
+|note  |The element buttonX does not exist on the page under test.|
+|reject|click                       |buttonX                      |

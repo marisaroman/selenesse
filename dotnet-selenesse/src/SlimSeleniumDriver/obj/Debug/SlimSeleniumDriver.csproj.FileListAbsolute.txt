@@ -1,0 +1,16 @@
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\bin\Debug\SlimSeleniumDriver.dll
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\bin\Debug\SlimSeleniumDriver.pdb
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\bin\Debug\fitSharp.dll
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\obj\Debug\SlimSeleniumDriver.dll
+C:\Documents and Settings\dcannan\My Documents\Visual Studio 2008\Projects\SlimSeleniumDriver\SlimSeleniumDriver\obj\Debug\SlimSeleniumDriver.pdb
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\bin\Debug\SlimSeleniumDriver.dll
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\bin\Debug\SlimSeleniumDriver.pdb
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\bin\Debug\fitSharp.dll
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\obj\Debug\ResolveAssemblyReference.cache
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\obj\Debug\SlimSeleniumDriver.dll
+C:\marisaseal-selenesse\src\dotnet-selenesse\SlimSeleniumDriver\obj\Debug\SlimSeleniumDriver.pdb

@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20091210</FitNesseVersion>
+  <rootPath>LoginToPortal</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>5</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('1605370599571679952');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img1605370599571679952"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="PortalTests.SetUp">.PortalTests.SetUp</a> <a href="PortalTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="1605370599571679952"><table border="1" cellspacing="0" _TABLENUMBER=3173609426377327541>
+<tr><td>import</td>
+</tr>
+<tr><td>Selenesse</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=5224144549326336249>
+<tr class="hidden"><td colspan="6">script</td>
+</tr>
+<tr><td>start</td>
+<td><span class="pass">Slim Selenium Driver</span></td>
+<td>localhost</td>
+<td>4444</td>
+<td>*firefox</td>
+<td>http://qa1/</td>
+</tr>
+<tr><td>open</td>
+<td colspan="5">/363_QA/</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="toc1">
+	<div class="contents">
+		<b>Contents:</b>
+		<ul/>
+	</div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=8621491877802594731>
+<tr><td><span class="fail">type;: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 3 header column(s), but row 2 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:129)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:125)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:82)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:261)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:243)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:230)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:194)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.TestResponder.performExecution(TestResponder.java:132)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span> <span class="error">Could not find class Type</span></td>
+<td>ctl03_userName <span class="error">The instance decisionTable_2 does not exist</span></td>
+<td>admin <span class="error">The instance decisionTable_2 does not exist</span></td>
+</tr>
+<tr><td>type;</td>
+<td>ctl03_password</td>
+<td>DocSite311</td>
+</tr>
+<tr><td>clickAndWait</td>
+<td colspan="2">ctl03_SigninBtn</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>LoginToPortal</relativePageName>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[Selenesse]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_1</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[pass(Slim Selenium Driver)]]></col>
+                    <col><![CDATA[localhost]]></col>
+                    <col><![CDATA[4444]]></col>
+                    <col><![CDATA[*firefox]]></col>
+                    <col><![CDATA[http://qa1/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[open]]></col>
+                    <col><![CDATA[/363_QA/]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_2</name>
+                <row>
+                    <col><![CDATA[<span class="fail">type;: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 3 header column(s), but row 2 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:129)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:125)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:82)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:261)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:243)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:230)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:194)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.TestResponder.performExecution(TestResponder.java:132)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span> <span class="error">Could not find class Type</span>]]></col>
+                    <col><![CDATA[ctl03_userName error(The instance decisionTable_2 does not exist)]]></col>
+                    <col><![CDATA[admin error(The instance decisionTable_2 does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[type;]]></col>
+                    <col><![CDATA[ctl03_password]]></col>
+                    <col><![CDATA[DocSite311]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[clickAndWait]]></col>
+                    <col><![CDATA[ctl03_SigninBtn]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, Selenesse]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_0, make, scriptTableActor, SlimSeleniumDriver, localhost, 4444, *firefox, http://qa1/]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Slim Selenium Driver]]></expected>
+                              <evaluationMessage><![CDATA[pass(Slim Selenium Driver)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_1, call, scriptTableActor, open, /363_QA/]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[localhost]]></expected>
+                              <evaluationMessage><![CDATA[localhost]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[4444]]></expected>
+                              <evaluationMessage><![CDATA[4444]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[*firefox]]></expected>
+                              <evaluationMessage><![CDATA[*firefox]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>5</col>
+          <row>1</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[http://qa1/]]></expected>
+                              <evaluationMessage><![CDATA[http://qa1/]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[open]]></expected>
+                              <evaluationMessage><![CDATA[open]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_0, make, decisionTable_2, Type, ctl03_userName, admin]]]></instruction>
+        <slimResult><![CDATA[!error:Could not find class Type]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not find class Type]]></actual>
+                              <expected><![CDATA[<span class="fail">type;: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 3 header column(s), but row 2 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:129)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:125)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:82)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:261)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:243)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:230)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:194)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.TestResponder.performExecution(TestResponder.java:132)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></expected>
+                              <evaluationMessage><![CDATA[<span class="fail">type;: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 3 header column(s), but row 2 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:129)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:125)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:82)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:261)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:243)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:230)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:194)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.TestResponder.performExecution(TestResponder.java:132)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span> <span class="error">Could not find class Type</span>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_1, call, decisionTable_2, table, [[type;, ctl03_password, DocSite311], [clickAndWait, ctl03_SigninBtn]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_2 does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_2 does not exist]]></actual>
+                              <expected><![CDATA[ctl03_userName]]></expected>
+                              <evaluationMessage><![CDATA[ctl03_userName error(The instance decisionTable_2 does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_2 does not exist]]></actual>
+                              <expected><![CDATA[admin]]></expected>
+                              <evaluationMessage><![CDATA[admin error(The instance decisionTable_2 does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

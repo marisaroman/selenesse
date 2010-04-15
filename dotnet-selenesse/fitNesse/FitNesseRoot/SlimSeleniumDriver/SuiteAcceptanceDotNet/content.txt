@@ -1,0 +1,6 @@
+!contents -R2 -g -p -f -h
+
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,dist\dotnet\fitSharp.dll %p}
+!define TEST_RUNNER {dist\dotnet\Runner.exe}
+
+!path dist\dotnet\SlimSeleniumDriver.dll

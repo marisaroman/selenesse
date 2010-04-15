@@ -1,0 +1,6 @@
+!3 !-slim-!
+|'''Date: '''|!-11:10:59 AM (EST) on Friday, February 26, 2010-!|
+|'''Test Page: '''|.SlimSeleniumDriver.SuiteAcceptanceJava.ClickAtTest|
+|'''Command: '''|!-java -cp fitnesse.jar;C:\selenesse\dist\java\selenesse.jar;C:\selenesse\lib\fitnesse.jar;C:\selenesse\lib\selenium-java-client-driver.jar fitnesse.slim.SlimService  8088-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-5.563 seconds-!|
