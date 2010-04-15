@@ -156,6 +156,22 @@ public class SlimSeleniumDriver {
 		return true;
 	}
 	
+	public boolean waitForElementNotPresent(String locator) {
+		Wait w = new WaitForElementToDisappear(locator);
+		try {
+			w.wait("Element " +locator+ " still present after "+timeoutSeconds+" seconds", Long.parseLong(timeoutMilliseconds));
+		}
+		catch (SeleniumException e) {
+			if (isKnownSeleniumBug(e)) {
+				waitForElementNotPresent(locator);
+			}
+			else {
+				throw e;
+			}
+		}
+		return true;
+	}
+	
 	public boolean waitForTextPresent(String text){
         Wait x=new WaitForTextToAppear(text);
         try {
@@ -172,20 +188,66 @@ public class SlimSeleniumDriver {
         return true;
 	}
 	
+	public boolean waitForTextNotPresent(String text){
+		Wait x=new WaitForTextToDisappear(text);
+		try {
+        	x.wait("Text " +text+ " still present after "+timeoutSeconds+" seconds", Long.parseLong(timeoutMilliseconds));
+        }
+        catch (SeleniumException e) {
+        	if (isKnownSeleniumBug(e)) {
+        		waitForTextNotPresent(text);
+        	}
+        	else {
+				throw e;
+			}
+        }
+        return true;
+	}
+	
+	public boolean waitForSelectedLabel(String selectLocator, String label) {
+		Wait x=new WaitForLabelToBeSelected(selectLocator, label);
+		boolean elementFound = seleniumInstance.isElementPresent(selectLocator); 
+		if (elementFound) {
+			try {
+				x.wait("Option with label " +label+ " not selected in " + selectLocator + " after " + timeoutSeconds 
+						+ " seconds", Long.parseLong(timeoutMilliseconds));
+			}
+			catch (SeleniumException e) {
+	        	if (isKnownSeleniumBug(e)) {
+	        		waitForSelectedLabel(selectLocator, label);
+	        	}
+	        	else {
+					throw e;
+				}
+	        }
+		}
+        return elementFound;
+	}
+	
 	//Waiter classes
 	protected class WaitForElementToAppear extends Wait {
-		protected String text;
-	   	public  WaitForElementToAppear(String  text) {
-	   		this.text= text; 
+		protected String locator;
+	   	public  WaitForElementToAppear(String locator) {
+	   		this.locator= locator; 
 	   	}
 	   	public boolean until() {
-	   		return seleniumInstance.isElementPresent(text);
+	   		return seleniumInstance.isElementPresent(locator);
 	   	}
     }
 	
+	protected class WaitForElementToDisappear extends Wait {
+		protected String locator;
+	   	public  WaitForElementToDisappear(String locator) {
+	   		this.locator= locator; 
+	   	}
+	   	public boolean until() {
+	   		return !seleniumInstance.isElementPresent(locator);
+	   	}
+	}
+	
 	protected class WaitForTextToAppear extends Wait{
 		protected String text;
-	   	public  WaitForTextToAppear(String  text){
+	   	public  WaitForTextToAppear(String text){
 	   		this.text= text; 
 	   	}
 	   	public boolean until(){
@@ -193,17 +255,42 @@ public class SlimSeleniumDriver {
 	   	}
     }
 	
+	protected class WaitForTextToDisappear extends Wait{
+		protected String text;
+		public WaitForTextToDisappear(String text){
+			this.text = text;
+		}
+		public boolean until(){
+			return !seleniumInstance.isTextPresent(text);
+		}
+	}
+	
+	protected class WaitForLabelToBeSelected extends Wait {
+		protected String locator;
+		protected String label;
+		public WaitForLabelToBeSelected (String locator, String label) {
+			this.locator = locator;
+			this.label = label;
+		}
+		public boolean until() {
+			return seleniumInstance.getSelectedLabel(locator).equals(label);
+		}
+	}
+	
 	private boolean optionIsAlreadySelected(String selectLocator, String optionLocator) {
-		if ((optionLocator.startsWith("id=") 
-				&& seleniumInstance.getSelectedId(selectLocator).equals(optionLocator.replace("id=", ""))) ||
-			(optionLocator.startsWith("label=") 
-				&& seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator.replace("label=", ""))) ||
-			(optionLocator.startsWith("value=")
-				&& seleniumInstance.getSelectedValue(selectLocator).equals(optionLocator.replace("value=", ""))) ||
-			(optionLocator.startsWith("index=")
-				&& seleniumInstance.getSelectedIndex(selectLocator).equals(optionLocator.replace("index=", ""))) ||
-			(seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator))) {
-			return true;
+		if (seleniumInstance.isSomethingSelected(selectLocator)) {
+			if ((optionLocator.startsWith("id=") 
+					&& seleniumInstance.getSelectedId(selectLocator).equals(optionLocator.replace("id=", ""))) ||
+				(optionLocator.startsWith("label=") 
+					&& seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator.replace("label=", ""))) ||
+				(optionLocator.startsWith("value=")
+					&& seleniumInstance.getSelectedValue(selectLocator).equals(optionLocator.replace("value=", ""))) ||
+				(optionLocator.startsWith("index=")
+					&& seleniumInstance.getSelectedIndex(selectLocator).equals(optionLocator.replace("index=", ""))) ||
+				(seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator))) {
+				return true;
+			}
+			return false;
 		}
 		return false;
 	}
