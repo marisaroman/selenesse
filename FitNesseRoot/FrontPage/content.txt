@@ -8,4 +8,6 @@
 
 !2 SlimSeleniumDriver
 
+!2 SuiteSelenesseExample
+
 !note !-SeleNesse-! is based on [[!-FitNesse-!][http://fitnesse.org]] Release v20100103 and Selenium RC 1.0.1

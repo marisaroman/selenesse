@@ -1,10 +1,9 @@
 !| scenario | Search google ||
-| open | http://www.google.com ||
+| open | ${baseURL} ||
 | pause | 3000 ||
 | type; | q | selenesse |
 | pause | 3000 ||
 | clickAndWait | btnG ||
-| waitForTextPresent | Did you mean: selenese ||
 | ensure | isTextPresent | selenesse |
 | reject | isTextPresent | watir |
 | pause | 3000 ||

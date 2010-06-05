@@ -1,2 +1,2 @@
 #|script|
-|close|
+|stop|
