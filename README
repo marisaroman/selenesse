@@ -1,4 +1,3 @@
-Selenesse is the modern bridge between Fitnesse and Selenium. 
+Selenesse is the modern bridge between FitNesse and Selenium. 
 
-For usage and examples, install Fitnesse, then download and put the SuiteSeleniumExample wiki under your FitnesseRoot directory
-
+For usage and examples, see file FitNesseRoot/SuiteSelenesseExample/InstallationInstructions/content.txt
