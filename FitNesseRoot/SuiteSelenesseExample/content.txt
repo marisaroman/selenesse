@@ -1,5 +1,5 @@
-Selenesse is Java code that implements an elegant, efficient bridge between Fitnesse and Selenium for the purpose of managing large suites of
-browser-based User Interface tests.  (A .NET version is in the works.)
+!2 Introduction
+Selenesse is Java code that implements an elegant, efficient bridge between FitNesse and Selenium for the purpose of managing large suites of browser-based User Interface tests.  (A .NET version is in the works.)
 
 Selenesse is based on Gojko Adzic's WebTest project(*), but is both more powerful and more efficient that WebTest.
 
@@ -7,26 +7,25 @@ This page is an executable example showing several unique aspects of writing tes
 
 !contents -R1 -h
 
-The SuiteSelenesseExample.SuiteSetup page at the top level imports selenesse.jar from */lib, then starts an instance of the Selenium driver using the
-SLIM test engine in Fitnesse.
-
+!2 Explanation of the files contained in this suite
+The SuiteSelenesseExample.InstallationInstructions contains some general instructions to get started with Selenesse.
+The SuiteSelenesseExample.SeleniumIdeFormat contains instructions for using the wiki Format in Selenium IDE.
+The SuiteSelenesseExample.SuiteSearch page contains the scenario library used in the test and the test itself.
+The SuiteSelenesseExample.SuiteSetUp page imports selenesse.jar, then starts an instance of the Selenium driver using the SLIM test engine in FitNesse.
 The Teardown page closes the browser at the end of the test.
 
-The SuiteSelenesseExample.SuiteSetUp and SuiteSelenesseExample.TearDown pages contain commands obeyed automatically by Fitnesse for each run of the Suite.
+The SuiteSelenesseExample.SuiteSetUp and SuiteSelenesseExample.TearDown pages contain commands obeyed automatically by FitNesse for each run of the Suite.
 
-In SuiteSelenesseExample.SuiteSearch.TestSearch the box containing the text "Search google" is a Fitnesse script that refers to a Scenario
-in SuiteSelenesseExample.SuiteSearch.ScenarioLibrary also named "Search google".
+In SuiteSelenesseExample.SuiteSearch.TestSearch the box containing the text "Search google" is a FitNesse script that refers to a Scenario in SuiteSelenesseExample.SuiteSearch.ScenarioLibrary also named "Search google".
 
-The SuiteSelenesseExample.SuiteSearch.ScenarioLibrary page contains the commands to drive Firefox with Selenium.
-The SuiteSelenesseExample.SuiteSearch.ScenarioLibrary page shows several interesting aspects of Selenesse that differ from Selenium as it is generally used.
+The SuiteSelenesseExample.SuiteSearch.ScenarioLibrary page contains the commands to drive Firefox with Selenium and shows several interesting aspects of Selenesse that differ from Selenium as it is generally used.
 
+!2 Further information about Selenesse
 We have supplied a pause() method.  It is in the example in case you want to watch the browser operate.  All time methods in Selenesse take milliseconds as an argument.
 
-Note the semicolon after the type() method.  In Fitnesse/SLIM, 2-argument methods are not allowed under most circumstances.  We have altered
-Fitnesse such that any time you wish to use a 2-argument Selenium method like type() or select(), you are required to put a semicolon
-after the method name.  Only methods that take 2 arguments are subject to this restriction.
+Note the semicolon after the type() method.  In FitNesse/SLIM, 2-argument methods are not allowed under most circumstances.  We have altered FitNesse such that any time you wish to use a 2-argument Selenium method like type() or select(), you are required to put a semicolon after the method name.  Only methods that take 2 arguments are subject to this restriction.
 
-Also note that Selenesse does not implement any of the Selenium verify* methods.  Instead Selenesse relies on the ensure() and check() methods native to Fitnesse.
+Also note that Selenesse does not implement any of the Selenium verify* methods.  Instead Selenesse relies on the ensure() and check() methods native to FitNesse.
 
 For example, instead of verifyTextPresent you would use:
 | ensure | isTextPresent | selenesse |
@@ -36,11 +35,9 @@ Instead of verifyText you would use:
 
 NOTE: extra pipes at the end of a check() line will cause a "Method not found" exception.
 
-Using Fitnesse check() and insure() methods allows more flexibility when deciding whether any such assertions should be errors (booleans)
-or exceptions (voids). This has the added advantage of showing the expected result and the actual result upon failure, where native Selenium
-merely reports failure.
+Using FitNesse check() and insure() methods allows more flexibility when deciding whether any such assertions should be errors (booleans) or exceptions (voids). This has the added advantage of showing the expected result and the actual result upon failure, where native Selenium merely reports failure.
 
-The Fitnesse check() method means "to validate".  The Selenium check() method means "to make checked, as in a radio button".
+The FitNesse check() method means "to validate".  The Selenium check() method means "to make checked, as in a radio button".
 For this reason, use the command "makeChecked" and "makeUnChecked" to drive Selenium in this fashion.
 
 Aside from the changes noted here, Selenesse will pass any other native Selenium commands on to Selenium itself and will evaluate the output Selenium returns
@@ -62,7 +59,16 @@ two ways:
 http://chrismcmahonsblog.blogspot.com/2009/11/ui-test-tool-search.html
 http://chrismcmahonsblog.blogspot.com/2009/12/selenesse-nee-webtest.html
 
-----
+!2 Some exceptions encountered:
+If you get the exception "The instance scriptTableActor. does not exist" it could mean: "Could not contact Selenium Server; have you started it on 'localhost:4444'?"
+
+If you get the exception "Could not invoke constructor for SlimSeleniumDriver[4]" make sure the file selenesse.jar is loaded before the test setup e.g. with the line: "!path dist/java/*.jar" if the file is contained in that directory.
+
+If you get the exception: "Could not find fixture: import." or "Could not find fixture: scenario." and it says in the test result: "Test Output Test System: fit:fit.FitServer" you have to add "!define TEST_SYSTEM {slim}" to the setup, as seen below:
+
+!2 Defining of variables for the test suite
+The following variables are used within this example test suite:
+
 Define path to selenesse.jar:
 !path dist/java/*.jar
 Define path to fitnesse.jar and selenium-java-client-driver.jar:

@@ -1,4 +1,3 @@
-                                          
 !|import  |
 |selenesse|
 
@@ -6,5 +5,5 @@
 |start            |Slim Selenium Driver|${seleniumHost}|${seleniumPort}|${seleniumBrowser}|${baseURL}|
 |setTimeoutSeconds|30                                                                                |
 
-!include -c .SuiteExample.ScenarioLibrary
-                                                                                    |
+!include -c .SuiteSelenesseExample.SuiteSearch.ScenarioLibrary
+
