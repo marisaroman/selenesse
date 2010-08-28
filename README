@@ -1,3 +1,31 @@
 Selenesse is the modern bridge between FitNesse and Selenium. 
 
-For usage and examples, see file FitNesseRoot/SuiteSelenesseExample/InstallationInstructions/content.txt
+
+To start using Selenesse, download the project from github.
+
+To start the FitNesse server and access the wiki, go to the project directory and
+execute: java -jar fitnesse.jar
+
+Now open your browser at http://localhost:8080 to access the FitNesse wiki.
+
+Download Selenium from http://seleniumhq.org/download/  (Note: we like the Sauce Labs
+version of Selenium known as Sauce RC: http://saucelabs.com/products/downloads.
+Not only is it easy to control in both Windows and *nix systems, it also fixes
+a bug that, as of this writing, makes the regular Selenium unusable on Mac OSX
+version 10.6.)
+
+Start Selenium on the default port 4444. 
+
+Open http://localhost:8080/SuiteSelenesseExample and press the "Suite" button to
+run the test. You should see an instance of Firefox come up and execute the
+search on Google for 'Selenesse', and the bars of the test should turn green.
+
+
+Other examples of Selenesse tests are available on Dawn Cannans home page:
+http://www.passionatetester.com/2010/05/executable-specifications-using.html
+and can be downloaded on the page at "Executable Specifications using FitNesse and Selenium".
+
+You can get further help on the Selenesse user group:
+http://groups.google.com/group/selenesse-users/
+
+(Copied from FitNesseRoot/SuiteSelenesseExample/InstallationInstructions/content.txt)
