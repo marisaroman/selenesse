@@ -1,9 +1,9 @@
 To start using Selenesse, download the project from github.
 
-To start the FitNesse server and access the wiki, go to the project directory and
+To start the !-FitNesse-! server and access the wiki, go to the project directory and
 execute: java -jar fitnesse.jar
 
-Now open your browser at http://localhost:8080 to access the FitNesse wiki.
+Now open your browser at http://localhost:8080 to access the !-FitNesse-! wiki.
 
 Download Selenium from http://seleniumhq.org/download/  (Note: we like the Sauce Labs
 version of Selenium known as Sauce RC: http://saucelabs.com/products/downloads.

@@ -4,6 +4,3 @@
 #!|script                                                                                            |
 |start            |Slim Selenium Driver|${seleniumHost}|${seleniumPort}|${seleniumBrowser}|${baseURL}|
 |setTimeoutSeconds|30                                                                                |
-
-!include -c .SuiteSelenesseExample.SuiteSearch.ScenarioLibrary
-

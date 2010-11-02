@@ -1,0 +1,3 @@
+#!| script |
+| Search google for|selenesse|
+|The page should contain at least|2|link(s) containing the phrase|selenesse|

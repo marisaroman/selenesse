@@ -6,9 +6,6 @@ package selenesse;
 
 import com.thoughtworks.selenium.*;
 import fitnesse.slim.*;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 public class SlimSeleniumDriver {
 	private static final String KNOWN_SELENIUM_BUG_EXCEPTION_MESSAGE = "Couldn't access document.body";
@@ -24,12 +21,6 @@ public class SlimSeleniumDriver {
 	}
 	
 	//Convenience methods
-	public String getToday() {
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yy");
-        Date date = new Date();
-        return dateFormat.format(date);
-	}
-	
 	public void setTimeoutSeconds(String seconds) {
 		timeoutSeconds = seconds;
 		timeoutMilliseconds = timeoutSeconds + "000";
@@ -172,6 +163,38 @@ public class SlimSeleniumDriver {
 		return true;
 	}
 	
+	public boolean waitForVisible(String locator) {
+		Wait x=new WaitForElementToBeVisible(locator);
+		try {
+			x.wait("Element " + locator + " not visible after " + timeoutSeconds + " seconds", Long.parseLong(timeoutMilliseconds));
+		}
+		catch (SeleniumException e) {
+        	if (isKnownSeleniumBug(e)) {
+        		waitForVisible(locator);
+        	}
+        	else {
+				throw e;
+			}
+        }
+        return true;
+	}
+	
+	public boolean waitForNotVisible(String locator) {
+		Wait x=new WaitForElementToBeInvisible(locator);
+		try {
+			x.wait("Element " + locator + " still visible after " + timeoutSeconds + " seconds", Long.parseLong(timeoutMilliseconds));
+		}
+		catch (SeleniumException e) {
+        	if (isKnownSeleniumBug(e)) {
+        		waitForNotVisible(locator);
+        	}
+        	else {
+				throw e;
+			}
+        }
+        return true;
+	}
+	
 	public boolean waitForTextPresent(String text){
         Wait x=new WaitForTextToAppear(text);
         try {
@@ -234,6 +257,27 @@ public class SlimSeleniumDriver {
 	   		return seleniumInstance.isElementPresent(locator);
 	   	}
     }
+	
+	protected class WaitForElementToBeVisible extends Wait {
+		protected String locator;
+		public WaitForElementToBeVisible(String locator) {
+			this.locator = locator;
+		}
+		public boolean until() {
+			return (seleniumInstance.isElementPresent(locator) &&
+					seleniumInstance.isVisible(locator));
+		}
+	}
+	
+	protected class WaitForElementToBeInvisible extends Wait {
+		protected String locator;
+		public WaitForElementToBeInvisible(String locator) {
+			this.locator = locator;
+		}
+		public boolean until() {
+			return !seleniumInstance.isVisible(locator);
+		}
+	}
 	
 	protected class WaitForElementToDisappear extends Wait {
 		protected String locator;

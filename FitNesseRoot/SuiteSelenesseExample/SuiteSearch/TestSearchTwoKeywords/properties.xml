@@ -2,10 +2,10 @@
 <properties>
 	<Edit/>
 	<Files/>
-	<Help></Help>
+	<Help/>
 	<Properties/>
 	<Refactor/>
 	<Search/>
-	<Suite/>
-	<Suites></Suites>
+	<Suites/>
+	<Test/>
 </properties>

@@ -1,0 +1,3 @@
+#!| script |
+| Search google for|software testing|
+|The page should contain at least|1|link(s) containing the phrase|software testing|

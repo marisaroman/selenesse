@@ -1,10 +1,8 @@
-!| scenario | Search google ||
-| open | ${baseURL} ||
-| pause | 3000 ||
-| type; | q | selenesse |
-| pause | 3000 ||
-| clickAndWait | btnG ||
-| ensure | isTextPresent | selenesse |
-| reject | isTextPresent | watir |
-| pause | 3000 ||
+!| scenario | Search google for|keyWords|
+| open | ${baseURL} |
+| type; | q | @keyWords |
+| click |name=btnG|up to|5|times|
+|waitForTextPresent|glob:About*results (* seconds)|
 
+!|scenario|The page should contain at least|minimumNumberOfLinks|link(s) containing the phrase|thePhrase|
+|check|getXpathCount|//a[contains(., '@thePhrase')]|>=@minimumNumberOfLinks|

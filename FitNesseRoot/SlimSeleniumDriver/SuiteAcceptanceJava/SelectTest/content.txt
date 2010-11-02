@@ -2,3 +2,4 @@
 |check |getSelectedLabel|sel1|Mr |
 |ensure|select;         |sel1|Mr |
 |ensure|select;         |sel1|Mrs|
+|reject|select;|nonexistentSelectControl|anything|

@@ -13,7 +13,7 @@ We thank Socialtext for letting us use it.
 
 ----
 
-
+{{{
 /**
  * Parse source and update TestCase. Throw an exception if any error occurs.
  *
@@ -86,3 +86,5 @@ function formatCommands(commands) {
  * Optional: XUL XML String for the UI of the options dialog
  */
 //configForm = '<textbox id="options_nameOfTheOption"/>'
+
+}}}
