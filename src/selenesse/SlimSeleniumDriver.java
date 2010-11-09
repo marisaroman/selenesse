@@ -131,6 +131,22 @@ public class SlimSeleniumDriver {
 	}
 	
 	//waitFor_ methods
+	public boolean waitForEditable(String locator) {
+		Wait w = new WaitForElementToBeEditable(locator);
+		try {
+			w.wait("Element " + locator + " not editable after " + timeoutSeconds + " seconds", Long.parseLong(timeoutMilliseconds));
+		}
+		catch (SeleniumException e) {
+			if (isKnownSeleniumBug(e)) {
+				waitForEditable(locator);
+			}
+			else {
+				throw e;
+			}
+		}
+		return true;
+	}
+	
 	public boolean waitForElementPresent(String locator) {
 		Wait w = new WaitForElementToAppear(locator);
 		try {
@@ -248,6 +264,15 @@ public class SlimSeleniumDriver {
 	}
 	
 	//Waiter classes
+	protected class WaitForElementToBeEditable extends Wait {
+		protected String locator;
+		public WaitForElementToBeEditable(String locator) {
+			this.locator = locator;
+		}
+		public boolean until() {
+			return seleniumInstance.isEditable(locator);
+		}
+	}
 	protected class WaitForElementToAppear extends Wait {
 		protected String locator;
 	   	public  WaitForElementToAppear(String locator) {
