@@ -7,8 +7,12 @@ package selenesse;
 import com.thoughtworks.selenium.*;
 import fitnesse.slim.*;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class SlimSeleniumDriver {
 	private static final String KNOWN_SELENIUM_BUG_EXCEPTION_MESSAGE = "Couldn't access document.body";
+	private static final String FORWARD_SLASH = "/";
 	private String timeoutSeconds = "30";
 	private String timeoutMilliseconds = timeoutSeconds + "000";
 	
@@ -18,6 +22,31 @@ public class SlimSeleniumDriver {
 	public SlimSeleniumDriver(String host, int port, String browser, String baseURL) {
 		seleniumInstance = new DefaultSelenium(host, port, browser, baseURL);
 		seleniumInstance.start();
+	}
+	
+	public String getCookies() {
+		return seleniumInstance.getCookie();
+	}
+	
+	//HTTP Requests
+	public String getResponse(String requestType, String path, String cookie) throws Exception {
+		String url = getFormattedURL(getBaseURL(), path);
+		return URLConnectionReader.getResponse(requestType, url, cookie);
+	}
+	
+	private String getBaseURL() throws MalformedURLException {
+		URL url = new URL(seleniumInstance.getLocation());
+		return url.getHost();
+	}
+	
+	private String getFormattedURL(String baseURL, String path) {
+		if (!baseURL.endsWith(FORWARD_SLASH)) {
+			baseURL += FORWARD_SLASH;
+		}
+		if (path.startsWith(FORWARD_SLASH)) {
+			path.replaceFirst(FORWARD_SLASH, "");
+		}
+		return "https://" + baseURL + path;
 	}
 	
 	//Convenience methods
