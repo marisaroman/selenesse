@@ -79,8 +79,7 @@ public class SlimSeleniumDriver {
 	public String postFile(String path, String mediaType, String filename) throws Exception
 	{
 		String url = getFormattedURL(getBaseURL(), path);
-		return HttpUtils.postMultipartFiles(url, getCookies(), Collections.singletonList(mediaType),
-			Collections.singletonList(filename));
+		return HttpUtils.postSimpleFile(url, getCookies(), mediaType, filename);
 	}
 	
 	// Makes a simple http request with the given request method.
