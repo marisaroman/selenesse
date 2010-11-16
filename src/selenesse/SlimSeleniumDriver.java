@@ -87,32 +87,16 @@ public class SlimSeleniumDriver {
 		return HttpUtils.makeRequest(requestMethod, url, getCookies());
 	}
 
-	/**
-	 * XXX Probably better to just use {@link #get(String)}, {@link #put(String)},
-	 * {@link #delete(String)}, {@link #postFiles(String, String, String)}, and
-	 * {@link #makeRequest(String, String)} instead of this. Saves you from having to create a
-	 * $COOKIE variable in the FitNesse markup.
-	 * 
-	 * @deprecated
-	 */
-	public String getResponse(String requestMethod, String path, String cookie) throws Exception {
-		String url = getFormattedURL(getBaseURL(), path);
-		return HttpUtils.makeRequest(requestMethod, url, cookie);
-	}
-	
-	private String getBaseURL() throws MalformedURLException {
+	public String getBaseURL() throws MalformedURLException {
 		URL url = new URL(seleniumInstance.getLocation());
-		return url.getHost();
+		return url.getProtocol() + "://" + url.getHost();
 	}
 	
 	private String getFormattedURL(String baseURL, String path) {
-		if (!baseURL.endsWith(FORWARD_SLASH)) {
-			baseURL += FORWARD_SLASH;
+		if (!path.startsWith(FORWARD_SLASH)) {
+			path = FORWARD_SLASH + path;
 		}
-		if (path.startsWith(FORWARD_SLASH)) {
-			path.replaceFirst(FORWARD_SLASH, "");
-		}
-		return "https://" + baseURL + path;
+		return baseURL + path;
 	}
 	
 	//Convenience methods
