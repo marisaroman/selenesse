@@ -68,16 +68,18 @@ public class SlimSeleniumDriver {
 	}
 
 	/**
-	 * Makes a multipart file POST request to the given path using the cookies currently set on the
+	 * Makes a simple file POST request to the given path using the cookies currently set on the
 	 * {@link Selenium} instance.
 	 * 
 	 * @param path
+	 * @param mediaType
+	 * @param filename
 	 * @return the response
 	 */
-	public String postFiles(String path, String mediaType, String filename) throws Exception
+	public String postFile(String path, String mediaType, String filename) throws Exception
 	{
 		String url = getFormattedURL(getBaseURL(), path);
-		return HttpUtils.postFiles(url, getCookies(), Collections.singletonList(mediaType),
+		return HttpUtils.postMultipartFiles(url, getCookies(), Collections.singletonList(mediaType),
 			Collections.singletonList(filename));
 	}
 	
