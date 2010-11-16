@@ -9,6 +9,7 @@ import fitnesse.slim.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
 
 public class SlimSeleniumDriver {
 	private static final String KNOWN_SELENIUM_BUG_EXCEPTION_MESSAGE = "Couldn't access document.body";
@@ -29,9 +30,74 @@ public class SlimSeleniumDriver {
 	}
 	
 	//HTTP Requests
-	public String getResponse(String requestType, String path, String cookie) throws Exception {
+
+	/**
+	 * Makes a GET request to the given path using the cookies currently set on the {@link Selenium}
+	 * instance.
+	 * 
+	 * @param path
+	 * @return the response
+	 */
+	public String get(String path) throws Exception
+	{
+		return makeRequest("GET", path);
+	}
+
+	/**
+	 * Makes a PUT request to the given path using the cookies currently set on the {@link Selenium}
+	 * instance.
+	 * 
+	 * @param path
+	 * @return the response
+	 */
+	public String put(String path) throws Exception
+	{
+		return makeRequest("PUT", path);
+	}
+	
+	/**
+	 * Makes a DELETE request to the given path using the cookies currently set on the
+	 * {@link Selenium} instance.
+	 * 
+	 * @param path
+	 * @return the response
+	 */
+	public String delete(String path) throws Exception
+	{
+		return makeRequest("DELETE", path);
+	}
+
+	/**
+	 * Makes a multipart file POST request to the given path using the cookies currently set on the
+	 * {@link Selenium} instance.
+	 * 
+	 * @param path
+	 * @return the response
+	 */
+	public String postFiles(String path, String mediaType, String filename) throws Exception
+	{
 		String url = getFormattedURL(getBaseURL(), path);
-		return URLConnectionReader.getResponse(requestType, url, cookie);
+		return HttpUtils.postFiles(url, getCookies(), Collections.singletonList(mediaType),
+			Collections.singletonList(filename));
+	}
+	
+	// Makes a simple http request with the given request method.
+	private String makeRequest(String requestMethod, String path) throws Exception {
+		String url = getFormattedURL(getBaseURL(), path);
+		return HttpUtils.makeRequest(requestMethod, url, getCookies());
+	}
+
+	/**
+	 * XXX Probably better to just use {@link #get(String)}, {@link #put(String)},
+	 * {@link #delete(String)}, {@link #postFiles(String, String, String)}, and
+	 * {@link #makeRequest(String, String)} instead of this. Saves you from having to create a
+	 * $COOKIE variable in the FitNesse markup.
+	 * 
+	 * @deprecated
+	 */
+	public String getResponse(String requestMethod, String path, String cookie) throws Exception {
+		String url = getFormattedURL(getBaseURL(), path);
+		return HttpUtils.makeRequest(requestMethod, url, cookie);
 	}
 	
 	private String getBaseURL() throws MalformedURLException {
