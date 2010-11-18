@@ -4,12 +4,14 @@
 
 package selenesse;
 
-import com.thoughtworks.selenium.*;
-import fitnesse.slim.*;
+import com.thoughtworks.selenium.DefaultSelenium;
+import com.thoughtworks.selenium.Selenium;
+import com.thoughtworks.selenium.SeleniumException;
+import com.thoughtworks.selenium.Wait;
+import fitnesse.slim.SystemUnderTest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collections;
 
 public class SlimSeleniumDriver {
 	private static final String KNOWN_SELENIUM_BUG_EXCEPTION_MESSAGE = "Couldn't access document.body";
@@ -177,7 +179,7 @@ public class SlimSeleniumDriver {
 	
 	public boolean select(String selectLocator, String optionLocator) {
 		boolean elementFound = seleniumInstance.isElementPresent(selectLocator);
-		if (elementFound && !optionIsAlreadySelected(selectLocator, optionLocator)) {
+		if (elementFound && !isOptionAlreadySelected(selectLocator, optionLocator)) {
 			seleniumInstance.select(selectLocator, optionLocator);
 		}
 		return elementFound;
@@ -203,7 +205,7 @@ public class SlimSeleniumDriver {
 	
 	public boolean selectAndWait(String selectLocator, String optionLocator) {
 		boolean elementFound = seleniumInstance.isElementPresent(selectLocator);
-		if (elementFound && !optionIsAlreadySelected(selectLocator, optionLocator)) {
+		if (elementFound && !isOptionAlreadySelected(selectLocator, optionLocator)) {
 				seleniumInstance.select(selectLocator, optionLocator);
 				seleniumInstance.waitForPageToLoad(timeoutMilliseconds);
 		}
@@ -426,25 +428,25 @@ public class SlimSeleniumDriver {
 		}
 	}
 	
-	private boolean optionIsAlreadySelected(String selectLocator, String optionLocator) {
-		if (seleniumInstance.isSomethingSelected(selectLocator)) {
-			if ((optionLocator.startsWith("id=") 
-					&& seleniumInstance.getSelectedId(selectLocator).equals(optionLocator.replace("id=", ""))) ||
-				(optionLocator.startsWith("label=") 
-					&& seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator.replace("label=", ""))) ||
-				(optionLocator.startsWith("value=")
-					&& seleniumInstance.getSelectedValue(selectLocator).equals(optionLocator.replace("value=", ""))) ||
-				(optionLocator.startsWith("index=")
-					&& seleniumInstance.getSelectedIndex(selectLocator).equals(optionLocator.replace("index=", ""))) ||
-				(seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator))) {
-				return true;
-			}
-			return false;
-		}
-		return false;
+	private boolean isOptionAlreadySelected(String selectLocator, String optionLocator) {
+		return (seleniumInstance.isSomethingSelected(selectLocator)) &&
+			isSelectSameAsOption(selectLocator, optionLocator);
 	}
-	
-	private boolean isKnownSeleniumBug(SeleniumException exception) {
+
+    private boolean isSelectSameAsOption(String selectLocator, String optionLocator) {
+        return (isEqualLessPrefix(selectLocator, optionLocator, "id=") ||
+            isEqualLessPrefix(selectLocator, optionLocator, "label=") ||
+            isEqualLessPrefix(selectLocator, optionLocator, "value=") ||
+            isEqualLessPrefix(selectLocator, optionLocator, "index=") ||
+            (seleniumInstance.getSelectedLabel(selectLocator).equals(optionLocator)));
+    }
+
+    private boolean isEqualLessPrefix(String selectLocator, String optionLocator, String prefix) {
+        return (optionLocator.startsWith(prefix)
+                && seleniumInstance.getSelectedId(selectLocator).equals(optionLocator.replace(prefix, "")));
+    }
+
+    private boolean isKnownSeleniumBug(SeleniumException exception) {
 		return exception.getMessage().contains(KNOWN_SELENIUM_BUG_EXCEPTION_MESSAGE);
 	}
 }
