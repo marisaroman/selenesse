@@ -150,6 +150,16 @@ public class SlimSeleniumDriver {
 		return elementFound;
 	}
 	
+	public boolean fireEvent(String locator, String eventName)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.fireEvent(locator, eventName);
+		}
+		return (elementFound);
+	}	
+	
 	public boolean focus(String locator) {
 		boolean elementFound = seleniumInstance.isElementPresent(locator);
 		if (elementFound) {
@@ -158,6 +168,16 @@ public class SlimSeleniumDriver {
 		}
 		return false;
 	}
+	
+	public boolean keyPress(String locator, String keySequence)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.keyPress(locator, keySequence);
+		}
+		return (elementFound);
+	}	
 	
 	public boolean makeChecked(String locator) {
 		boolean elementFound = seleniumInstance.isElementPresent(locator);
@@ -177,6 +197,37 @@ public class SlimSeleniumDriver {
 		return false;
 	}
 	
+	public boolean mouseClick(String locator)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.mouseDown(locator);
+			seleniumInstance.mouseUp(locator);
+		}
+		return (elementFound);
+	}
+	
+	public boolean mouseDown(String locator)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.mouseDown(locator);
+		}
+		return (elementFound);
+	}
+	
+	public boolean mouseUp(String locator)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.mouseUp(locator);
+		}
+		return (elementFound);
+	}
+	
 	public boolean select(String selectLocator, String optionLocator) {
 		boolean elementFound = seleniumInstance.isElementPresent(selectLocator);
 		if (elementFound && !isOptionAlreadySelected(selectLocator, optionLocator)) {
@@ -184,6 +235,16 @@ public class SlimSeleniumDriver {
 		}
 		return elementFound;
 	}
+	
+	public boolean setCursorPosition(String locator, String position)
+	{
+		boolean elementFound = seleniumInstance.isElementPresent(locator);
+		if (elementFound)
+		{
+			seleniumInstance.setCursorPosition(locator, position);
+		}
+		return (elementFound);
+	}	
 	
 	public boolean type(String locator, String text) {
 		boolean elementFound = seleniumInstance.isElementPresent(locator);
